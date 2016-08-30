@@ -90,10 +90,13 @@
 <meta property="og:url" content="http://yoursite.com/2016/08/30/hexo-record/index.html">
 <meta property="og:site_name" content="梁东博客">
 <meta property="og:description" content="此文档用于记录hexo 使用过程中遇到的一些问题及解决思考，或可供后来者参考。">
-<meta property="og:updated_time" content="2016-08-30T08:17:46.789Z">
+<meta property="og:image" content="http://yoursite.com/uploads/2016-08-30_165633.png">
+<meta property="og:image" content="http://yoursite.com/uploads/2016-08-30_170126.png">
+<meta property="og:updated_time" content="2016-08-30T09:02:51.892Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo 日志">
 <meta name="twitter:description" content="此文档用于记录hexo 使用过程中遇到的一些问题及解决思考，或可供后来者参考。">
+<meta name="twitter:image" content="http://yoursite.com/uploads/2016-08-30_165633.png">
 
 
 
@@ -257,6 +260,13 @@
 
           
             
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/30/hexo-record/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/30/hexo-record/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -281,6 +291,20 @@
 <p>执行 hexo deploy<br>出现错误提示：<br>error deployer not found:git</p>
 <p>原因分析：<br>hexo-deployer-git plugin过期</p>
 <p>解决方案：<br>重新安装该plugin即可<br>npm install hexo-deployer-git –save</p>
+<h2 id="添加评论功能"><a href="#添加评论功能" class="headerlink" title="添加评论功能"></a>添加评论功能</h2><p>登录 <em>多说</em> 官网</p>
+<ul>
+<li>登录后，选择 <em>我要安装</em></li>
+<li>填写信息，多说域名代表 duoshuo_shortname</li>
+<li>在站点配置文件中，新增 duoshuo_shortname 字段，如下：<br>duoshuo_shortname: lian1925</li>
+<li>That’s all</li>
+</ul>
+<h2 id="添加阅读量"><a href="#添加阅读量" class="headerlink" title="添加阅读量"></a>添加阅读量</h2><p>登录 LeanCloud 官网</p>
+<ul>
+<li>创建新应用</li>
+<li>创建数据表<br><img src="/uploads/2016-08-30_165633.png" alt="Alt text"></li>
+<li>获取参数<br><img src="/uploads/2016-08-30_170126.png" alt="Alt text"></li>
+<li>主题配置文件，添加<br>leancloud_visitors:<br>enable: true<br>app_id: pMkCJz5lgDCUYl41IfaFsmQI-gzGzoHsz<br>app_key: VslnooixL9zOuFy9UaQTXbs2</li>
+</ul>
 
       
     </div>
@@ -343,6 +367,10 @@
 
           
   <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/08/30/hexo-record/"
+           data-title="hexo 日志" data-url="http://yoursite.com/2016/08/30/hexo-record/">
+      </div>
     
   </div>
 
@@ -425,7 +453,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#快速发布博客"><span class="nav-number">1.</span> <span class="nav-text">快速发布博客</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#快速发布博客"><span class="nav-number">1.</span> <span class="nav-text">快速发布博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加评论功能"><span class="nav-number">2.</span> <span class="nav-text">添加评论功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加阅读量"><span class="nav-number">3.</span> <span class="nav-text">添加阅读量</span></a></li></ol></div>
             
           </div>
         </section>
@@ -547,9 +575,30 @@
 
   
 
+  
+    
+  
 
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"lian1925"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
 
   
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
 
 
 
