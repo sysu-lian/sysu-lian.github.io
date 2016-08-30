@@ -400,13 +400,15 @@ dd {
   border-bottom: 1px solid #999;
   background: inherit;
   opacity: 0.5;
+  margin-top: 10px;
 }
 #local-search-input:focus {
   opacity: 1;
 }
 .search-icon {
   position: absolute;
-  top: 9px;
+  top: 19px;
+  left: 185px;
 }
 table {
   margin: 20px 0;
@@ -1549,7 +1551,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #9630bf;
+  background: #ff7aff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2018,10 +2020,11 @@ a.search-result {
 #local-search-input {
   margin-bottom: 10px;
   width: 50%;
+  margin-left: 25%;
 }
 .popup-btn-close {
   position: absolute;
-  top: 6px;
+  top: 16px;
   right: 14px;
   color: #4ebd79;
   font-size: 14px;
@@ -2066,13 +2069,6 @@ a.search-result {
 .site-pv .busuanzi-value,
 .page-pv .busuanzi-value {
   margin: 0 5px;
-}
-.site-uv {
-  margin-right: 10px;
-}
-.site-uv::after {
-  content: "|";
-  padding-left: 10px;
 }
 .use-motion .post {
   opacity: 0;
