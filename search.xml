@@ -4,6 +4,21 @@
   
     
     <entry>
+      <title><![CDATA[跨境之微信公众号支付（wechat_publicpay）]]></title>
+      <url>http://yoursite.com/2016/08/31/wechat-publicpay/</url>
+      <content type="html"><![CDATA[<p>由工作要求，需要为用户开发在微信环境下的支付功能，此处需要用到的接口为微信公众号支付接口。<br>又因为我们是跨境电商系统，故每笔交易支付完成，需要支付企业向海关提交支付单，此处我们用到了易极付企业提供的整合版支付接口。<br><a id="more"></a><br>支付流程：</p>
+<ul>
+<li>在微信环境下，获取支付用户的openId</li>
+<li>准备交易数据：外部订单号、卖家ID、交易金额、用户的openId、用户ip</li>
+<li>配合商家的基础数据，进行数据构造与签名</li>
+<li>以form表单形式，向网关提交请求</li>
+</ul>
+<h2 id="获取用户IP"><a href="#获取用户IP" class="headerlink" title="获取用户IP"></a>获取用户IP</h2><p>对于网络协议而言，用户发送请求的数据中包含了用户所在的IP地址（起始地址）。唯有这样，服务端接收到请求，方能知道将请求结果发送至何方。<br>这里推荐一种简单的获取方法：<br><strong>ip.html</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://pv.sohu.com/cityjson?ie=utf-8"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line">			document.write(returnCitySN["cip"] + ',' + returnCitySN["cname"])</div><div class="line">		<span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="获取用户的openId"><a href="#获取用户的openId" class="headerlink" title="获取用户的openId"></a>获取用户的openId</h2><p>用户的openId是微信用户对于公众号平台的唯一标识。</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[hexo 日志]]></title>
       <url>http://yoursite.com/2016/08/30/hexo-record/</url>
       <content type="html"><![CDATA[<p>此文档用于记录hexo 使用过程中遇到的一些问题及解决思考，或可供后来者参考。<br><a id="more"></a></p>
