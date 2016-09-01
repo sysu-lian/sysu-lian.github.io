@@ -86,13 +86,13 @@
 
 <meta name="description" content="此文档用于记录hexo 使用过程中遇到的一些问题及解决思考，或可供后来者参考。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo 日志">
+<meta property="og:title" content="博客档案">
 <meta property="og:url" content="https://lian1925.github.io/2016/08/30/hexo-record/index.html">
 <meta property="og:site_name" content="梁东博客">
 <meta property="og:description" content="此文档用于记录hexo 使用过程中遇到的一些问题及解决思考，或可供后来者参考。">
-<meta property="og:updated_time" content="2016-08-30T09:53:56.592Z">
+<meta property="og:updated_time" content="2016-09-01T03:27:59.866Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo 日志">
+<meta name="twitter:title" content="博客档案">
 <meta name="twitter:description" content="此文档用于记录hexo 使用过程中遇到的一些问题及解决思考，或可供后来者参考。">
 
 
@@ -116,7 +116,7 @@
 
   <link rel="canonical" href="https://lian1925.github.io/2016/08/30/hexo-record/"/>
 
-  <title> hexo 日志 | 梁东博客 </title>
+  <title> 博客档案 | 梁东博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -259,7 +259,7 @@
             
             
               
-                hexo 日志
+                博客档案
               
             
           </h1>
@@ -323,7 +323,28 @@
 <li>在站点配置文件中，新增 duoshuo_shortname 字段，如下：<br>duoshuo_shortname: lian1925</li>
 <li>That’s all</li>
 </ul>
-<h2 id="添加阅读量"><a href="#添加阅读量" class="headerlink" title="添加阅读量"></a>添加阅读量</h2>
+<h2 id="添加阅读量"><a href="#添加阅读量" class="headerlink" title="添加阅读量"></a>添加阅读量</h2><p>静态网站技术，意味着大部分的内容都是事先编辑好，保存为静态（不经常变动意思）。故，一些动态的内容，如评论、计数等模块就需要借助外来平台。<br>计数有“不蒜”，号称一行脚本+一行标签，搞定一切</p>
+<ul>
+<li><p>在网页中，加入busuanzi.js</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>添加标签</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_pv"</span>&gt;</span>本站总访问量<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_pv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>次<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="添加站内博客搜索"><a href="#添加站内博客搜索" class="headerlink" title="添加站内博客搜索"></a>添加站内博客搜索</h2><p>添加local search</p>
+<ul>
+<li><p>安装hexo-generator-search</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-generator-search --save</div></pre></td></tr></table></figure>
+</li>
+<li><p>编辑站点配置文件</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">search:</span></div><div class="line"><span class="attr">  path:</span> search.xml</div><div class="line"><span class="attr">  field:</span> post</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>但是，遇到一个小问题：搜索关键字，点击结果列表，发现指引到了错误的页面，如：<a href="http://144.dragonparking.com/?site=yoursite.com&amp;t=1472696460&amp;s=bd69f3d2c55abb3dcf520e33640fb857" target="_blank" rel="external">http://144.dragonparking.com/?site=yoursite.com&amp;t=1472696460&amp;s=bd69f3d2c55abb3dcf520e33640fb857</a></p>
+<p>分析：site=yoursite.com 给了我一个非常重要的情报。猜测，当前系统将site指引到了yoursite.com，而不是我们网站的真正url。<br>故，因此在站点配置文件中修改：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># URL</span></div><div class="line"><span class="comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></div><div class="line"><span class="attr">url:</span> https://lian1925.github.io/</div></pre></td></tr></table></figure></p>
+<p>果然，问题解决。</p>
+
       
     </div>
 
@@ -391,7 +412,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/08/30/hexo-record/"
-           data-title="hexo 日志" data-url="https://lian1925.github.io/2016/08/30/hexo-record/">
+           data-title="博客档案" data-url="https://lian1925.github.io/2016/08/30/hexo-record/">
       </div>
     
   </div>
@@ -436,7 +457,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -475,7 +496,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#快速发布博客"><span class="nav-number">1.</span> <span class="nav-text">快速发布博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加评论功能"><span class="nav-number">2.</span> <span class="nav-text">添加评论功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加阅读量"><span class="nav-number">3.</span> <span class="nav-text">添加阅读量</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#快速发布博客"><span class="nav-number">1.</span> <span class="nav-text">快速发布博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加评论功能"><span class="nav-number">2.</span> <span class="nav-text">添加评论功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加阅读量"><span class="nav-number">3.</span> <span class="nav-text">添加阅读量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加站内博客搜索"><span class="nav-number">4.</span> <span class="nav-text">添加站内博客搜索</span></a></li></ol></div>
             
           </div>
         </section>
