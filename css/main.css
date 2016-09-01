@@ -521,6 +521,10 @@ pre code {
   background: none;
   text-shadow: none;
 }
+.highlight {
+  border: 1px solid #bbb;
+  border-radius: 7px;
+}
 .highlight pre {
   border: none;
   margin: 0;
@@ -1551,7 +1555,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #aa2666;
+  background: #55eb46;
 }
 .links-of-blogroll {
   font-size: 13px;
