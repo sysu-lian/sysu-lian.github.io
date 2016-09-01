@@ -90,10 +90,12 @@
 <meta property="og:url" content="https://lian1925.github.io/2016/08/30/hexo-record/index.html">
 <meta property="og:site_name" content="梁东博客">
 <meta property="og:description" content="此文档用于记录hexo 使用过程中遇到的一些问题及解决思考，或可供后来者参考。">
-<meta property="og:updated_time" content="2016-09-01T03:27:59.866Z">
+<meta property="og:image" content="https://lian1925.github.io/uploads/communicat.jpg">
+<meta property="og:updated_time" content="2016-09-01T07:35:52.369Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博客档案">
 <meta name="twitter:description" content="此文档用于记录hexo 使用过程中遇到的一些问题及解决思考，或可供后来者参考。">
+<meta name="twitter:image" content="https://lian1925.github.io/uploads/communicat.jpg">
 
 
 
@@ -311,7 +313,7 @@
       
 
       
-        <p>此文档用于记录hexo 使用过程中遇到的一些问题及解决思考，或可供后来者参考。<br><a id="more"></a></p>
+        <p><img src="/uploads/communicat.jpg" alt="alt"><br>此文档用于记录hexo 使用过程中遇到的一些问题及解决思考，或可供后来者参考。<br><a id="more"></a></p>
 <h2 id="快速发布博客"><a href="#快速发布博客" class="headerlink" title="快速发布博客"></a>快速发布博客</h2><p>欲只需一句命令，将blog内容，发布于github服务器。<br>配置 站点配置文件<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> git</div><div class="line"><span class="attr">  repo:</span> https://github.com/lian1925/lian1925.github.io.git</div><div class="line"><span class="attr">  branch:</span> master</div></pre></td></tr></table></figure></p>
 <p>执行 hexo deploy<br>出现错误提示：<br>error deployer not found:git</p>
 <p>原因分析：<br>hexo-deployer-git plugin过期</p>
