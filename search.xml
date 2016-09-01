@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[跨境之微信公众号支付（wechat_publicpay）]]></title>
-      <url>http://yoursite.com/2016/08/31/wechat-publicpay/</url>
+      <url>https://lian1925.github.io/2016/08/31/wechat-publicpay/</url>
       <content type="html"><![CDATA[<p>由工作要求，需要为用户开发在微信环境下的支付功能，此处需要用到的接口为微信公众号支付接口。<br>又因为我们是跨境电商系统，故每笔交易支付完成，需要支付企业向海关提交支付单，此处我们用到了易极付企业提供的整合版支付接口。<br><a id="more"></a><br>支付流程：</p>
 <ul>
 <li>在微信环境下，获取支付用户的openId</li>
@@ -20,7 +20,7 @@
     
     <entry>
       <title><![CDATA[hexo 日志]]></title>
-      <url>http://yoursite.com/2016/08/30/hexo-record/</url>
+      <url>https://lian1925.github.io/2016/08/30/hexo-record/</url>
       <content type="html"><![CDATA[<p>此文档用于记录hexo 使用过程中遇到的一些问题及解决思考，或可供后来者参考。<br><a id="more"></a></p>
 <h2 id="快速发布博客"><a href="#快速发布博客" class="headerlink" title="快速发布博客"></a>快速发布博客</h2><p>欲只需一句命令，将blog内容，发布于github服务器。<br>配置 站点配置文件<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> git</div><div class="line"><span class="attr">  repo:</span> https://github.com/lian1925/lian1925.github.io.git</div><div class="line"><span class="attr">  branch:</span> master</div></pre></td></tr></table></figure></p>
 <p>执行 hexo deploy<br>出现错误提示：<br>error deployer not found:git</p>
@@ -38,7 +38,7 @@
     
     <entry>
       <title><![CDATA[Hello World]]></title>
-      <url>http://yoursite.com/2016/08/30/hello-world/</url>
+      <url>https://lian1925.github.io/2016/08/30/hello-world/</url>
       <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br><a id="more"></a></p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
