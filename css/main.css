@@ -1556,7 +1556,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #965e41;
+  background: #b00dff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2520,5 +2520,23 @@ body {
 @media (max-width: 767px) {
   .post-body {
     text-align: justify;
+  }
+}
+.tenxun_vedio {
+  max-width: 100%;
+  line-height: 1.6;
+  box-sizing: border-box !important;
+  word-wrap: break-word !important;
+  width: 670px !important;
+  height: 502.5px !important;
+}
+@media screen and (max-width: 750px) {
+  .tenxun_vedio {
+    max-width: 100%;
+    line-height: 1.6;
+    box-sizing: border-box !important;
+    word-wrap: break-word !important;
+    width: 670px !important;
+    height: 277px !important;
   }
 }
