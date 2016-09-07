@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="文档,博客," />
+  <meta name="keywords" content="Spring Boot,Mybatis," />
 
 
 
@@ -84,18 +84,16 @@
 
 
 
-<meta name="description" content="此文档用于记录hexo 使用过程中遇到的一些问题及解决思考，或可供后来者参考。">
+<meta name="description" content="在spring boot整合 Mybatis时，采用注解的配置方式，会显得非常优雅。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="博客档案">
-<meta property="og:url" content="https://lian1925.github.io/2016/08/30/hexo-record/index.html">
+<meta property="og:title" content="Spring Boot 优雅使用 Mybatis">
+<meta property="og:url" content="https://lian1925.github.io/2016/09/06/spring-mybatis/index.html">
 <meta property="og:site_name" content="梁东博客">
-<meta property="og:description" content="此文档用于记录hexo 使用过程中遇到的一些问题及解决思考，或可供后来者参考。">
-<meta property="og:image" content="https://lian1925.github.io/uploads/communicat.jpg">
-<meta property="og:updated_time" content="2016-09-02T03:28:43.508Z">
+<meta property="og:description" content="在spring boot整合 Mybatis时，采用注解的配置方式，会显得非常优雅。">
+<meta property="og:updated_time" content="2016-09-06T09:53:33.204Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="博客档案">
-<meta name="twitter:description" content="此文档用于记录hexo 使用过程中遇到的一些问题及解决思考，或可供后来者参考。">
-<meta name="twitter:image" content="https://lian1925.github.io/uploads/communicat.jpg">
+<meta name="twitter:title" content="Spring Boot 优雅使用 Mybatis">
+<meta name="twitter:description" content="在spring boot整合 Mybatis时，采用注解的配置方式，会显得非常优雅。">
 
 
 
@@ -116,9 +114,9 @@
 
 
 
-  <link rel="canonical" href="https://lian1925.github.io/2016/08/30/hexo-record/"/>
+  <link rel="canonical" href="https://lian1925.github.io/2016/09/06/spring-mybatis/"/>
 
-  <title> 博客档案 | 梁东博客 </title>
+  <title> Spring Boot 优雅使用 Mybatis | 梁东博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -261,7 +259,7 @@
             
             
               
-                博客档案
+                Spring Boot 优雅使用 Mybatis
               
             
           </h1>
@@ -273,8 +271,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-30T16:06:55+08:00" content="2016-08-30">
-              2016-08-30
+            <time itemprop="dateCreated" datetime="2016-09-06T13:54:40+08:00" content="2016-09-06">
+              2016-09-06
             </time>
           </span>
 
@@ -284,8 +282,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/08/30/hexo-record/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/30/hexo-record/" itemprop="commentsCount"></span>
+                <a href="/2016/09/06/spring-mybatis/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/06/spring-mybatis/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -313,39 +311,21 @@
       
 
       
-        <p><img src="/uploads/communicat.jpg" alt="alt"><br>此文档用于记录hexo 使用过程中遇到的一些问题及解决思考，或可供后来者参考。<br><a id="more"></a></p>
-<h2 id="快速发布博客"><a href="#快速发布博客" class="headerlink" title="快速发布博客"></a>快速发布博客</h2><p>欲只需一句命令，将blog内容，发布于github服务器。<br>配置 站点配置文件<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> git</div><div class="line"><span class="attr">  repo:</span> https://github.com/lian1925/lian1925.github.io.git</div><div class="line"><span class="attr">  branch:</span> master</div></pre></td></tr></table></figure></p>
-<p>执行 hexo deploy<br>出现错误提示：<br>error deployer not found:git</p>
-<p>原因分析：<br>hexo-deployer-git plugin过期</p>
-<p>解决方案：<br>重新安装该plugin即可<br>npm install hexo-deployer-git –save</p>
-<h2 id="添加评论功能"><a href="#添加评论功能" class="headerlink" title="添加评论功能"></a>添加评论功能</h2><p>登录 <em>多说</em> 官网</p>
-<ul>
-<li>登录后，选择 <em>我要安装</em></li>
-<li>填写信息，多说域名代表 duoshuo_shortname</li>
-<li>在站点配置文件中，新增 duoshuo_shortname 字段，如下：<br>duoshuo_shortname: lian1925</li>
-<li>That’s all</li>
-</ul>
-<h2 id="添加阅读量-不蒜"><a href="#添加阅读量-不蒜" class="headerlink" title="添加阅读量 不蒜"></a>添加阅读量 不蒜</h2><p>静态网站技术，意味着大部分的内容都是事先编辑好，保存为静态（不经常变动意思）。故，一些动态的内容，如评论、计数等模块就需要借助外来平台。<br>计数有“不蒜”，号称一行脚本+一行标签，搞定一切</p>
-<ul>
-<li><p>在网页中，加入busuanzi.js</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>添加标签</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_pv"</span>&gt;</span>本站总访问量<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_pv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>次<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="添加站内博客搜索"><a href="#添加站内博客搜索" class="headerlink" title="添加站内博客搜索"></a>添加站内博客搜索</h2><p>添加local search</p>
-<ul>
-<li><p>安装hexo-generator-search</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-generator-search --save</div></pre></td></tr></table></figure>
-</li>
-<li><p>编辑站点配置文件</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">search:</span></div><div class="line"><span class="attr">  path:</span> search.xml</div><div class="line"><span class="attr">  field:</span> post</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>但是，遇到一个小问题：搜索关键字，点击结果列表，发现指引到了错误的页面，如：<a href="http://144.dragonparking.com/?site=yoursite.com&amp;t=1472696460&amp;s=bd69f3d2c55abb3dcf520e33640fb857" target="_blank" rel="external">http://144.dragonparking.com/?site=yoursite.com&amp;t=1472696460&amp;s=bd69f3d2c55abb3dcf520e33640fb857</a></p>
-<p>分析：site=yoursite.com 给了我一个非常重要的情报。猜测，当前系统将site指引到了yoursite.com，而不是我们网站的真正url。<br>故，因此在站点配置文件中修改：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># URL</span></div><div class="line"><span class="comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></div><div class="line"><span class="attr">url:</span> https://lian1925.github.io/</div></pre></td></tr></table></figure></p>
-<p>果然，问题解决。</p>
+        <p>在spring boot整合 Mybatis时，采用注解的配置方式，会显得非常优雅。<br><a id="more"></a><br>假设，我们需要实现出入操作（新增记录），如：新加入一条user数据。</p>
+<p>方式一， 使用@Param传参<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Insert</span>(<span class="string">"INSERT INTO aho_user(username, password) VALUES(#&#123;username&#125;, #&#123;password&#125;)"</span>)</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">insert</span><span class="params">(@Param(<span class="string">"username"</span>)</span> String username, @<span class="title">Param</span><span class="params">(<span class="string">"password"</span>)</span> String password)</span>;</div></pre></td></tr></table></figure></p>
+<p>方式二， 使用Map传参<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Insert</span>(<span class="string">"INSERT INTO USER(NAME, AGE) VALUES(#&#123;name,jdbcType=VARCHAR&#125;, #&#123;age,jdbcType=INTEGER&#125;)"</span>)</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">insertByMap</span><span class="params">(Map&lt;String, Object&gt; map)</span></span>;</div></pre></td></tr></table></figure></p>
+<p>方式三，使用object传参<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Insert</span>(<span class="string">"INSERT INTO aho_user(username, password, is_mobile ) VALUES(#&#123;username&#125;, #&#123;password&#125;,#&#123;isMobile&#125;)"</span>)</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">insertByUser</span><span class="params">(User user)</span></span>;</div></pre></td></tr></table></figure></p>
+<p>假设我们需要查询数据，</p>
+<p>方式一，使用name查询<br>映射方式<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Select</span>(<span class="string">"SELECT * FROM aho_user WHERE username = #&#123;username&#125;"</span>)</div><div class="line"><span class="meta">@Results</span>(&#123;</div><div class="line">        <span class="meta">@Result</span>(id=<span class="keyword">true</span>,property = <span class="string">"id"</span>, column = <span class="string">"user_id"</span>),</div><div class="line">        <span class="meta">@Result</span>(property = <span class="string">"username"</span>, column = <span class="string">"username"</span>),</div><div class="line">        <span class="meta">@Result</span>(property = <span class="string">"password"</span>, column = <span class="string">"password"</span>),</div><div class="line">        <span class="meta">@Result</span>(property = <span class="string">"isMobile"</span>, column = <span class="string">"is_mobile"</span>),</div><div class="line">&#125;)</div><div class="line"><span class="function">List&lt;User&gt; <span class="title">findByName</span><span class="params">(@Param(<span class="string">"username"</span>)</span> String username)</span>;</div></pre></td></tr></table></figure></p>
+<p>调用<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/name"</span>)</div><div class="line"><span class="function"><span class="keyword">public</span> User <span class="title">findbyname</span><span class="params">()</span> </span>&#123;</div><div class="line">    List&lt;User&gt; u = userMapper.findByName(<span class="string">"lian"</span>);</div><div class="line">    <span class="keyword">return</span> u.get(<span class="number">0</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>方式二，使用id查询</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Select</span>(<span class="string">"SELECT * FROM aho_user WHERE user_id = #&#123;id&#125;"</span>)</div><div class="line"><span class="meta">@Results</span>(&#123;</div><div class="line">        <span class="meta">@Result</span>(id=<span class="keyword">true</span>,property = <span class="string">"id"</span>, column = <span class="string">"user_id"</span>),</div><div class="line">        <span class="meta">@Result</span>(property = <span class="string">"username"</span>, column = <span class="string">"username"</span>),</div><div class="line">        <span class="meta">@Result</span>(property = <span class="string">"password"</span>, column = <span class="string">"password"</span>),</div><div class="line">        <span class="meta">@Result</span>(property = <span class="string">"isMobile"</span>, column = <span class="string">"is_mobile"</span>),</div><div class="line">&#125;)</div><div class="line"><span class="function">User <span class="title">findById</span><span class="params">(@Param(<span class="string">"id"</span>)</span> Long id)</span>;</div></pre></td></tr></table></figure>
+<p>调用<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/id"</span>)</div><div class="line"><span class="function"><span class="keyword">public</span> User <span class="title">findbyid</span><span class="params">()</span> </span>&#123;</div><div class="line">    Long id = Long.valueOf(<span class="number">56</span>);</div><div class="line">    User u = userMapper.findById(id);</div><div class="line">    <span class="keyword">return</span> u;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>假设，我们需要更新数据<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Update</span>(<span class="string">"UPDATE aho_user SET username=#&#123;username&#125;,password=#&#123;password&#125;,is_mobile=#&#123;isMobile&#125;, WHERE user_id=#&#123;id&#125;"</span>)</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(User user)</span></span>;</div></pre></td></tr></table></figure></p>
+<p>调用<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/idu"</span>)</div><div class="line"><span class="function"><span class="keyword">public</span> User <span class="title">update</span><span class="params">()</span> </span>&#123;</div><div class="line">    Long id = Long.valueOf(<span class="number">56</span>);</div><div class="line">    User u = userMapper.findById(id);</div><div class="line">    u.setUsername(<span class="string">"dong"</span>);</div><div class="line">    userMapper.update(u);</div><div class="line">    u = userMapper.findById(id);</div><div class="line">    <span class="keyword">return</span> u;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>假如，我们需要删除数据<br>映射<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Delete</span>(<span class="string">"DELETE FROM aho_user WHERE user_id =#&#123;id&#125;"</span>)</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">delete</span><span class="params">(Long id)</span></span>;</div></pre></td></tr></table></figure></p>
+<p>调用<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/idd"</span>)</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">deletebyid</span><span class="params">()</span> </span>&#123;</div><div class="line">    Long id = Long.valueOf(<span class="number">56</span>);</div><div class="line">    <span class="keyword">int</span> u = userMapper.delete(id);</div><div class="line">    <span class="keyword">return</span> u;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>增删改查<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">UserMapper</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Select</span>(<span class="string">"SELECT * FROM aho_user WHERE user_id = #&#123;id&#125;"</span>)</div><div class="line">    <span class="meta">@Results</span>(&#123;</div><div class="line">            <span class="meta">@Result</span>(id=<span class="keyword">true</span>,property = <span class="string">"id"</span>, column = <span class="string">"user_id"</span>),</div><div class="line">            <span class="meta">@Result</span>(property = <span class="string">"username"</span>, column = <span class="string">"username"</span>),</div><div class="line">            <span class="meta">@Result</span>(property = <span class="string">"password"</span>, column = <span class="string">"password"</span>),</div><div class="line">            <span class="meta">@Result</span>(property = <span class="string">"isMobile"</span>, column = <span class="string">"is_mobile"</span>),</div><div class="line">    &#125;)</div><div class="line">    <span class="function">User <span class="title">findById</span><span class="params">(@Param(<span class="string">"id"</span>)</span> Long id)</span>;</div><div class="line"></div><div class="line">    <span class="meta">@Insert</span>(<span class="string">"INSERT INTO user(name, age) VALUES(#&#123;name&#125;, #&#123;age&#125;)"</span>)</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">insert</span><span class="params">(@Param(<span class="string">"name"</span>)</span> String name, @<span class="title">Param</span><span class="params">(<span class="string">"age"</span>)</span> Integer age)</span>;</div><div class="line"></div><div class="line">    <span class="meta">@Update</span>(<span class="string">"UPDATE user SET age=#&#123;age&#125; WHERE name=#&#123;name&#125;"</span>)</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(User user)</span></span>;</div><div class="line"></div><div class="line">    <span class="meta">@Delete</span>(<span class="string">"DELETE FROM user WHERE id =#&#123;id&#125;"</span>)</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">delete</span><span class="params">(Long id)</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -368,9 +348,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/文档/" rel="tag">#文档</a>
+            <a href="/tags/Spring-Boot/" rel="tag">#Spring Boot</a>
           
-            <a href="/tags/博客/" rel="tag">#博客</a>
+            <a href="/tags/Mybatis/" rel="tag">#Mybatis</a>
           
         </div>
       
@@ -379,13 +359,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/09/03/wzyy/" rel="next" title="五字要言">
+                <i class="fa fa-chevron-left"></i> 五字要言
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/08/31/wechat-publicpay/" rel="prev" title="跨境之微信公众号支付（wechat_publicpay）">
-                跨境之微信公众号支付（wechat_publicpay） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -400,10 +380,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/08/30/hexo-record/"
-     data-title="博客档案"
+        <div class="ds-share flat" data-thread-key="2016/09/06/spring-mybatis/"
+     data-title="Spring Boot 优雅使用 Mybatis"
      data-content=""
-     data-url="https://lian1925.github.io/2016/08/30/hexo-record/">
+     data-url="https://lian1925.github.io/2016/09/06/spring-mybatis/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -430,8 +410,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/08/30/hexo-record/"
-           data-title="博客档案" data-url="https://lian1925.github.io/2016/08/30/hexo-record/">
+      <div class="ds-thread" data-thread-key="2016/09/06/spring-mybatis/"
+           data-title="Spring Boot 优雅使用 Mybatis" data-url="https://lian1925.github.io/2016/09/06/spring-mybatis/">
       </div>
     
   </div>
@@ -515,7 +495,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#快速发布博客"><span class="nav-number">1.</span> <span class="nav-text">快速发布博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加评论功能"><span class="nav-number">2.</span> <span class="nav-text">添加评论功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加阅读量-不蒜"><span class="nav-number">3.</span> <span class="nav-text">添加阅读量 不蒜</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加站内博客搜索"><span class="nav-number">4.</span> <span class="nav-text">添加站内博客搜索</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>
