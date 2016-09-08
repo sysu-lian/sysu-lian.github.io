@@ -1366,8 +1366,8 @@ pre .javascript .function {
 }
 .posts-expand .post-eof {
   display: block;
-  margin: 80px auto 60px;
-  width: 8%;
+  margin: 20px auto 20px;
+  width: 80%;
   height: 1px;
   background: #ccc;
   text-align: center;
